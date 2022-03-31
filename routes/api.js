@@ -8,6 +8,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/find', (req, res, next) => {
   // This will return all the data, exposing only the id and action field to the client
+  console.log('find')
   WLAddr.find()
     .then((data) => res.json(data))
     .catch(next);
